@@ -1,5 +1,4 @@
 import React from 'react'
-import { Typography, Button } from 'antd'
 import PageLayout from './PageLayout'
 import UserCard from './UserCard'
 import users from '../data/users.json'

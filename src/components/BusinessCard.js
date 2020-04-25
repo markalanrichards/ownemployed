@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Avatar, Descriptions} from 'antd'
+import {Card, Avatar} from 'antd'
 import avatar from '../static/avatars/business/Captain_Planet.png'
 
 const { Meta } = Card
