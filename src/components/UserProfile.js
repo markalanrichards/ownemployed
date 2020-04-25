@@ -26,6 +26,7 @@ const UserProfile = () => {
                                 <Descriptions.Item label="Education">{profile.education}</Descriptions.Item>
                             </Descriptions>,
                         </Card>
+
                         <Row gutter={4}>
                             {Object.keys(profile.socialMedia).map(k =>
                                 <Col span={4}>
