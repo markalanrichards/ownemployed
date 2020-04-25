@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import { createBrowserHistory } from 'history'
 import 'antd/dist/antd.css'
@@ -10,9 +10,9 @@ const history = createBrowserHistory()
 
 function App() {
   return (
-    <Router history={history}>
+    <HashRouter history={history} basename="/" >
       {renderRoutes(routes)}
-    </Router>
+    </HashRouter>
   );
 }
 
