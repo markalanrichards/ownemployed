@@ -39,7 +39,7 @@ const UserProfile = () => {
                         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'left' }}>
                             {Object.keys(user.socialMedia || {}).map(k =>
                                   <a href={user.socialMedia[k]}>
-                                      <img alt={k} src={`/imgs/social-media/${k}.svg`} style={{height: "72px"}}/>
+                                      <img alt={k} src={`/imgs/social-media/${k}.svg`} style={{height: "72px", padding:"7px"}}/>
                                   </a>
                             )}
                         </div>
