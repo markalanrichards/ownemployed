@@ -1,10 +1,11 @@
 import React from 'react'
 import {Card} from 'antd'
 import avatar from '../static/avatars/user/deborah.png'
+import {Link} from "react-router-dom";
 
 const {Meta} = Card
 const UserCard = ({user, style}) => (
-  <a href={`/user-profile/${user.id}`}>
+  <Link to={`/user-profile/${user.id}`}>
     <Card
       cover={
         <div style={{height: '110px', margin: 'auto', width: '110px'}}>
@@ -18,7 +19,7 @@ const UserCard = ({user, style}) => (
         description={user.summary}
       />
     </Card>
-  </a>
+  </Link>
 )
 
 
