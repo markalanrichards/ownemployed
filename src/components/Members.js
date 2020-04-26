@@ -19,7 +19,7 @@ const Members = () => {
         summary="Look for Ownemployed members to collaborate with, or for others who share your interests."
         />
       <Row>
-        <Col span={8}>
+        <Col span={4}>
           <Filter
             baseUrl="/members"
             options={['Volunteering', 'Brand Management', 'Blockchain']}
@@ -27,8 +27,8 @@ const Members = () => {
             title='Filter Members by Tag'
             />
         </Col>
-        <Col span={16}>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <Col span={20}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             {Object.values(users).map((user) => (<UserCard key={user.id} user={user}/>))}
           </div>
         </Col>
