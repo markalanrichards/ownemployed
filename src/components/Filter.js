@@ -6,7 +6,7 @@ import { colors } from '../utils/colors'
 const {Meta} = Card;
 
 const Filter = ({ baseUrl, title, options, selected }) => (
-  <Card style={{ margin: '8px' }}>
+  <Card style={{ width: '300px', margin: '8px', paddingRight: '32px' }}>
     <Meta title={title}/>
     <br/>
     {Object.values(options).map((item, i) => {
@@ -20,7 +20,7 @@ const Filter = ({ baseUrl, title, options, selected }) => (
 
         return (
         <Link to={`${baseUrl}?selected=${encodeURIComponent(JSON.stringify(next))}`}>
-          <Tag key={i} color={color}>{item}</Tag>
+          <Tag key={i} color={color} style={{ margin: '4px'}}>{item}</Tag>
         </Link>
         )
     })}

@@ -11,24 +11,25 @@ const ExploreIdeas = () => {
   const selectedString = new URLSearchParams(useLocation().search).get("selected") || "[]"
   const selectedArray = JSON.parse(selectedString)
   console.log(selectedArray)
+
   return (
   <PageLayout>
     <PageIntro
       title="Search among OwnEmployed's business ideas!"
       summary="Our entrepreneurs share their stories behind how they've started and grown profitable online businesses.
       Follow others and make a connection!"
-      actions={[{ text: "Add Your Product", onClick: () => {}}]}
+      actions={[{ text: "Add a Project", onClick: () => {}}]}
       />
     <Row>
-      <Col span={6}>
+      <Col span={8}>
         <Filter
           baseUrl="/projects"
-          options={['Volunteering', 'stuff', 'me']}
+          options={['Volunteering', 'Blockchain', 'Platform Development']}
           selected={selectedArray}
           title='Filter Projects by Tag'
           />
       </Col>
-      <Col span={18}>
+      <Col span={16}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', margin: 'auto' }}>
           {Object.values(businesses).map((business) => (<BusinessCard key={business.id} business={business}/>))}
         </div>
