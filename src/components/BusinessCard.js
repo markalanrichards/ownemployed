@@ -6,6 +6,7 @@ const { Meta } = Card
 
 const BusinessCard = ({ business, style }) => {
     return (
+      <a href={`/business-profile/${business.id}`}>
         <Card style={{ height: '220px', width: '300px', margin: '8px' }} title={business.name}>
         <Meta
             avatar={<Avatar src={avatar}/>}
@@ -27,6 +28,7 @@ const BusinessCard = ({ business, style }) => {
                 {business.status || ''}
             </div>
         </Card>
+      </a>
     )
 }
 
