@@ -28,33 +28,38 @@
   "medFindIt": {
     "id": "medFindIt",
     "name": "Med Find It",
-    "ownerId": null,
+    "ownerId": "Greg Malonas",
     "tagline": "A social platform to find innovative medical solutions.",
     "description": "",
-    "status": "open"
+    "status": "Defining value proposition",
+    "Contributors":"3"
+"
   },
   "spacerapp": {
     "id": "spacerapp",
     "name": "Spacerapp",
-    "ownerId": null,
+    "ownerId": "Minas Kalanda",
     "tagline": "The best way to find space information",
     "description": "",
-    "status": "closed"
+    "status": "Defining value proposition",
+    "Contributors":"1"
   },
   "foodForGood": {
     "id": "foodForGood",
     "name": "FoodforGood",
-    "ownerId": null,
+    "ownerId": "Jingas Minsson, Gorgon Mad, Fredric Hansson",
     "tagline": "Share food with your neighbours!",
     "description": "",
-    "status": "closed"
+    "status": "Launched",
+    "Contributors":"5"
   },
   "theWolve": {
     "id": "theWolve",
     "name": "The Wolve",
-    "ownerId": null,
+    "ownerId": "George Kan, Mona Li",
     "tagline": "A security solution to avoid damages on your motorbike",
     "description": "",
-    "status": "closed"
+    "status": "Raising capital",
+    "contributors":"6"
   }
 }
