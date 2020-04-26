@@ -8,7 +8,9 @@ const { Header, Content } = Layout
 const PageLayout = ({ children }) => (
   <Layout style={{ minHeight: '100vh' }}>
     <Header style={{ background: '#ffffff', height: '130px', textAlign: 'center' }}>
-      <div><img alt='logo' src={logo} width='245px'/></div>
+      <Link to='/'>
+        <div><img alt='logo' src={logo} width='245px'/></div>
+      </Link>
       <Menu mode='horizontal' theme='light'>
         <Menu.Item><Link to='/members/deborah'>My Site</Link></Menu.Item>
         <Menu.Item><Link to='/projects'>Projects</Link></Menu.Item>
