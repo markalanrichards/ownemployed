@@ -38,10 +38,10 @@ const Members = () => {
             />
         </Col>
         <Col span={20}>
-          <Row  justify="space-around" align="top" gutter={[24,24]}>
+          <Row  justify="space-around" align="top" gutter={[8,24]}>
             {selectedUsers.map((user) => (
               <Col xs={20} sm={16} md={12} lg={8} xl={4} >
-                <UserCard key={user.id} user={user}/>
+                <UserCard key={user.id} user={user} style={{minHeight: "260px"}}/>
               </Col>
             ))}
           </Row>

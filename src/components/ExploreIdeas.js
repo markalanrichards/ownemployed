@@ -46,8 +46,12 @@ const ExploreIdeas = () => {
         <Col span={20} >
           <Row  justify="space-around" align="top" gutter={[24,24]}>
             {selectedBusinesses.map((business) => (
-              <Col xs={20} sm={16} md={12} lg={8} xl={4}>
-                <BusinessCard key={business.id} business={business}/>
+              <Col xs={20} sm={16} md={12} lg={10} xl={6}>
+                <BusinessCard
+                  key={business.id}
+                  business={business}
+                  style={{minHeight:"150px"}}
+                />
               </Col>
             ))}
           </Row>
