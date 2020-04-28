@@ -12,7 +12,7 @@ const BusinessCard = ({ business, style }) => {
   } catch (e) {}
     return (
       <Link to={`/projects/${business.id}`}>
-        <Card style={{ height: '220px', width: '300px', margin: '8px' }} title={business.name}>
+        <Card title={business.name}>
         <Meta
             avatar={<Avatar src={avatar}/>}
             title={business.name}
@@ -22,10 +22,7 @@ const BusinessCard = ({ business, style }) => {
             style={{
                 fontSize: '12px',
                 color: colors.primaryLight,
-                padding: '8px 24px',
-                position: 'absolute',
-                bottom: '10px',
-                left: '0px'
+
                 }}
                 >
                 {business.status ? `Status: ${business.status}` : ''}

@@ -11,13 +11,12 @@ const UserCard = ({user, style}) => {
   return (
     <Link to={`/members/${user.id}`}>
       <Card
-        bodyStyle={{ padding: '16px 0' }}
         cover={
           <div style={{height: '110px', width: '100%'}}>
             <img alt='member' src={avatar} style={{ height: '110px'}}/>
           </div>
         }
-        style={{height: '300px', width: '300px', margin: '8px', padding: '24px'}}
+        style={{}}
       >
         <Meta
           title={user.name}
