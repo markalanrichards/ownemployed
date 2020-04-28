@@ -26,8 +26,8 @@ const UserProfile = () => {
                 actions={[{ text: "Connect", onClick: () => {}}]}
                 />
             <div>
-                <Row justify="space-around" align="middle" gutter={16}>
-                    <Col xs={20} sm={16} md={12}>
+                <Row gutter={16}>
+                    <Col span={12}>
                         <Card
                             cover={<img alt='member' src={image}/>}
                                 >
@@ -44,7 +44,7 @@ const UserProfile = () => {
                             )}
                         </div>
                     </Col>
-                    <Col xs={20} sm={16} md={12}>
+                    <Col span={12}>
                         <TagsCard
                             title="Seeking"
                             tags={user.lookingFor}
@@ -74,7 +74,7 @@ const UserProfile = () => {
                             </Card>
                         }
                         {user.connectedModels && Array.isArray(user.connectedModels) &&
-                            <Card title="Connected" size="small">
+                            <Card title="Connected">
                                 {(user.connectedModels || []).map(businessId => businesses[businessId])
                                     .filter(Boolean)
                                     .map((business) => (<BusinessCard business={business}/>))
