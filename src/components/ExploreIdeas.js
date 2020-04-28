@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Grid, Row, Col } from 'antd'
 import PageLayout from './PageLayout'
 import BusinessCard from './BusinessCard'
 import businesses from '../data/businesses.json'
@@ -10,6 +10,7 @@ import businessTags from "../utils/businessTags";
 import { projects } from '../data/content.json'
 
 const { title, summary } = projects
+const { useBreakpoint } = Grid
 
 const ExploreIdeas = () => {
   const selectedString = new URLSearchParams(useLocation().search).get("selected") || "[]"
@@ -23,6 +24,10 @@ const ExploreIdeas = () => {
     )
   }
   const allBusinessTags = [...new Set([].concat(...Object.values(businesses).map(business => businessTags(business))))].sort()
+
+  const screens = useBreakpoint()
+  const useFullWidth = !screens.xl
+
   return (
   <PageLayout>
     <PageIntro
@@ -30,8 +35,8 @@ const ExploreIdeas = () => {
       summary={summary}
       actions={[{ text: "Add a Project", onClick: () => {}}]}
       />
-    <Row>
-      <Col span={4}>
+    <Row gutter={[16,16]}>
+      <Col lg={24} xl={4}>
         <Filter
           baseUrl="/projects"
           options={allBusinessTags}
@@ -39,8 +44,8 @@ const ExploreIdeas = () => {
           title='Filter Projects by Tag'
           />
       </Col>
-      <Col span={20}>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Col lg={24} xl={20} style={{ padding: '0 32px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: useFullWidth ? 'center' : 'flex-start' }}>
           {selectedBusinesses.map((business) => (<BusinessCard key={business.id} business={business}/>))}
         </div>
       </Col>
