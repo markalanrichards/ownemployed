@@ -4,9 +4,28 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
+import { Auth0Provider } from 'react-auth0-spa'
+import config from 'config/config'
+import history from 'utils/history'
+
+const onRedirectCallback = appState => {
+    history.push(
+        appState && appState.targetUrl
+            ? appState.targetUrl
+            : window.location.pathname
+    )
+}
+
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Auth0Provider
+            domain={config.auth0Domain}
+            client_id={config.auth0ClientID}
+            redirect_uri={window.location.origin}
+            onRedirectCallback={onRedirectCallback}
+        >
+            <App />
+        </Auth0Provider>
     </React.StrictMode>,
     document.getElementById('root')
 )
