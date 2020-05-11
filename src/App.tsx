@@ -11,10 +11,12 @@ import UserProfile from 'pages/user/profile'
 import ExploreIdeas from 'pages/explore/explore'
 import Members from 'pages/members/members'
 import SignUpForm from 'pages/signup/signup'
+import ExternalAPI from 'components/ExternalApi'
 
 function App() {
     return (
         <Router history={history}>
+            <ExternalAPI></ExternalAPI>
             <Switch>
                 <Route component={Home} path="/" exact={true} />
                 <Route component={ExploreIdeas} path="/projects" exact={true} />

@@ -1520,6 +1520,11 @@
   resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-7.2.1.tgz#2ad4e844175a3738cb9e7064be5ea070b8863a1c"
   integrity sha512-oZ0Ib5I4Z2pUEcoo95cT1cr6slco9WY7yiPpG+RGNkj8YcYgJnM7pXmYmorNOReh8MIGcKSqXyeGjxnr8YiZbA==
 
+"@types/auth0@^2.20.3":
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.20.3.tgz#205240142ff74188252ace08b5001e674f73ea4b"
+  integrity sha512-vY0BWZIuhHT1rCVsWK3yWABD62b7Eoa8aTPh1s3mrOxZDg2+YcTJtE4T9dS8hXr8O9Nm6f9Se6qrmR4G9+9HJg==
+
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
