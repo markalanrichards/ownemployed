@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, Row, Col } from 'antd'
+import { Link } from 'components/NavLink'
+import { Flex, Box } from 'rebass'
 import logo from 'static/ownemployed_logo.png'
+import Button from './Button'
 
 type NavigationItem = {
     label: string
@@ -11,24 +12,18 @@ type NavigationItem = {
 const NavigationBar = ({ items }: { items: NavigationItem[] }) => {
     return (
         <div>
-            <Row>
-                <Col span={4}>
-                    <Link to="/">
-                        <div>
-                            <img alt="logo" src={logo} width="245px" />
-                        </div>
+            <Flex my={-2} color="black" alignItems="center">
+                <Link to="/">
+                    <img alt="logo" src={logo} width="245px" />
+                </Link>
+                <Box mx="auto" />
+                {items.map((item, index) => (
+                    <Link key={index} to={item.url}>
+                        {item.label}
                     </Link>
-                </Col>
-                <Col push={12}>
-                    <Menu mode="horizontal" theme="light">
-                        {items.map((item, index) => (
-                            <Menu.Item key={index}>
-                                <Link to={item.url}>{item.label}</Link>
-                            </Menu.Item>
-                        ))}
-                    </Menu>
-                </Col>
-            </Row>
+                ))}
+                <Button label="Create Project" />
+            </Flex>
         </div>
     )
 }
