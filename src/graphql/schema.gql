@@ -1,0 +1,61 @@
+type Business {
+  id: ID!
+  name: String!
+  ownerID: ID!
+  status: String!
+  contributors: [Float!]!
+  tagline: String
+  description: String
+  keyActivities: [String!]
+  channels: [String!]
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Mutation {
+  addBusiness(newBusinessData: NewBusinessInput!): Business!
+  removeBusiness(id: String!): Boolean!
+  addUser(newUserData: NewUserInput!): User!
+  removeUser(id: String!): Boolean!
+}
+
+input NewBusinessInput {
+  name: String!
+  signupDate: Date!
+}
+
+input NewUserInput {
+  name: String!
+  signupDate: Date!
+}
+
+type Query {
+  Business(id: String!): Business!
+  Businesses(skip: Int = 0, take: Int = 25): [Business!]!
+  User(id: String!): User!
+  Users(skip: Int = 0, take: Int = 25): [User!]!
+}
+
+type SocialMedia {
+  name: String!
+  url: String!
+}
+
+type Subscription {
+  BusinessAdded: Business!
+  UserAdded: User!
+}
+
+type User {
+  id: ID!
+  name: String!
+  signupDate: Date!
+  summary: String
+  socialMedia: [SocialMedia!]
+  interests: [String!]
+  lookingFor: [String!]
+  skills: [String!]
+  education: String
+  location: String
+}
